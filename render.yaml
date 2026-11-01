@@ -1,0 +1,12 @@
+version: "3"
+services:
+  - type: web
+    name: vets477-api
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production

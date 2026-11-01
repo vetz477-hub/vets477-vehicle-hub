@@ -1,0 +1,12 @@
+{
+  "name": "vets477-vehicle-hub",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"python3 -m http.server 8080 --directory client\"",
+    "start": "echo 'Use server and client individually'"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

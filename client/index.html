@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vets477 Vehicle Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">v</div>
+          <div>
+            <h1>vets477</h1>
+            <p>Vehicle Hub</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <section class="hero">
+          <p class="eyebrow">Find your vehicle in seconds</p>
+          <h2>Vehicle data, manuals, and maintenance help in one place.</h2>
+          <div class="search-box">
+            <input
+              id="query"
+              type="text"
+              placeholder="Enter plate, VIN, or engine number"
+              aria-label="Search by plate, VIN, or engine number"
+            />
+            <button id="searchBtn">Search</button>
+          </div>
+          <div id="status" class="status" aria-live="polite"></div>
+        </section>
+
+        <section id="result" class="result-card hidden">
+          <div class="result-header">
+            <div>
+              <p class="label">Vehicle</p>
+              <h3 id="vehicleTitle">Vehicle</h3>
+            </div>
+            <button id="saveBtn" class="secondary-btn">Save</button>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item"><span class="label">Manufacturer</span><strong id="manufacturer"></strong></div>
+            <div class="info-item"><span class="label">Model</span><strong id="model"></strong></div>
+            <div class="info-item"><span class="label">Year</span><strong id="year"></strong></div>
+            <div class="info-item"><span class="label">Engine</span><strong id="engineCode"></strong></div>
+            <div class="info-item"><span class="label">Transmission</span><strong id="transmission"></strong></div>
+            <div class="info-item"><span class="label">Power</span><strong id="power"></strong></div>
+            <div class="info-item"><span class="label">Torque</span><strong id="torque"></strong></div>
+            <div class="info-item"><span class="label">Plate</span><strong id="plate"></strong></div>
+          </div>
+
+          <div class="section-block">
+            <h4>Specifications</h4>
+            <ul id="specList"></ul>
+          </div>
+
+          <div class="section-block">
+            <h4>Manuals</h4>
+            <ul id="manualList"></ul>
+          </div>
+
+          <div class="section-block">
+            <h4>Maintenance</h4>
+            <ul id="maintenanceList"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

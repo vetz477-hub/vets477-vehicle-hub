@@ -1,0 +1,14 @@
+{
+  "name": "vets477-api",
+  "version": "1.0.0",
+  "description": "Vehicle search and specs API for vets477",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.17",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
