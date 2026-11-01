@@ -17,7 +17,17 @@ const specListEl = document.getElementById("specList");
 const manualListEl = document.getElementById("manualList");
 const maintenanceListEl = document.getElementById("maintenanceList");
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = (() => {
+  if (typeof window !== "undefined" && window.__API_BASE__) {
+    return window.__API_BASE__;
+  }
+
+  if (window.location.hostname === "localhost") {
+    return "http://localhost:4000";
+  }
+
+  return "https://vets477-api.onrender.com";
+})();
 
 function showStatus(msg, type = "success") {
   statusEl.textContent = msg;
